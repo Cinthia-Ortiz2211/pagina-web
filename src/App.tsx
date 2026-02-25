@@ -105,220 +105,225 @@ export default function App() {
       </header>
 
       {/* About Me */}
-      <section id="sobre-mi" className="py-32 bg-white">
-        <motion.div
-          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-          {...fadeIn}
-        >
-          <h2 className="section-header mb-16">Sobre mí</h2>
-          <div className="space-y-8 text-xl leading-relaxed text-soft-black font-light">
-            <p>
-              Soy Cinthia Jesabel Ortiz, una persona curiosa, organizada y apasionada por aprender. Me encanta trabajar en espacios donde pueda aportar claridad, empatía y soluciones prácticas. Tengo una fuerte orientación al servicio y al detalle, algo que desarrollé a lo largo de mis años en atención al público y en mis primeras experiencias dentro del mundo web.
-            </p>
-            <p>
-              Disfruto crear, ordenar procesos y mejorar cada día, ya sea en un proyecto, en un sitio web o dentro de un equipo. Me caracterizo por mi compromiso, mi actitud positiva y mi capacidad para adaptarme a distintos entornos con profesionalismo y buena energía.
-            </p>
-          </div>
-        </motion.div>
+      <section id="sobre-mi" className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="card-subtle p-8 md:p-16 rounded-3xl"
+            {...fadeIn}
+          >
+            <h2 className="section-header">Sobre mí</h2>
+            <div className="space-y-8 text-xl leading-relaxed text-soft-black font-light">
+              <p>
+                Soy Cinthia Jesabel Ortiz, una persona curiosa, organizada y apasionada por aprender. Me encanta trabajar en espacios donde pueda aportar claridad, empatía y soluciones prácticas. Tengo una fuerte orientación al servicio y al detalle, algo que desarrollé a lo largo de mis años en atención al público y en mis primeras experiencias dentro del mundo web.
+              </p>
+              <p>
+                Disfruto crear, ordenar procesos y mejorar cada día, ya sea en un proyecto, en un sitio web o dentro de un equipo. Me caracterizo por mi compromiso, mi actitud positiva y mi capacidad para adaptarme a distintos entornos con profesionalismo y buena energía.
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Studies */}
-      <section id="estudios" className="py-32 bg-light-cream">
+      <section id="estudios" className="py-24 bg-light-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 className="section-header mb-24 text-center" {...fadeIn}>Estudios</motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { year: '2025 - Presente', title: 'Tecnicatura Universitaria en Programación', school: 'UTN (En Curso)' },
-              { year: '2023', title: 'Técnico Auxiliar Forense', school: 'I.T.E.P.S.A (Finalizado)' },
-              { year: '2018 - Pausa', title: 'Licenciatura en Criminalística', school: 'F.A.S.T.A' },
-              { year: '2017', title: 'Finalización de Secundaria', school: 'Educación Media' }
-            ].map((study, idx) => (
-              <motion.div
-                key={idx}
-                className="card-subtle p-8 rounded-2xl group hover:border-pastel-pink/40 transition-colors"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <div className="mb-6 text-terracotta font-bold text-xs tracking-widest uppercase">{study.year}</div>
-                <h3 className="font-bold text-lg mb-3 text-soft-black">{study.title}</h3>
-                <p className="text-soft-black/60 text-sm">{study.school}</p>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div className="card-subtle p-8 md:p-16 rounded-3xl" {...fadeIn}>
+            <h2 className="section-header">Estudios</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { year: '2025 - Presente', title: 'Tecnicatura Universitaria en Programación', school: 'UTN (En Curso)' },
+                { year: '2023', title: 'Técnico Auxiliar Forense', school: 'I.T.E.P.S.A (Finalizado)' },
+                { year: '2018 - Pausa', title: 'Licenciatura en Criminalística', school: 'F.A.S.T.A' },
+                { year: '2017', title: 'Finalización de Secundaria', school: 'Educación Media' }
+              ].map((study, idx) => (
+                <div
+                  key={idx}
+                  className="bg-light-cream/50 p-6 rounded-2xl border border-light-grey/50 group hover:border-pastel-pink/40 transition-colors"
+                >
+                  <div className="mb-4 text-terracotta font-bold text-xs tracking-widest uppercase">{study.year}</div>
+                  <h3 className="font-bold text-lg mb-2 text-soft-black">{study.title}</h3>
+                  <p className="text-soft-black/60 text-sm">{study.school}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Experience */}
-      <section id="trayectoria" className="py-32 bg-white">
+      <section id="trayectoria" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 className="section-header mb-24 text-center" {...fadeIn}>Trayectoria</motion.h2>
-          <div className="space-y-12">
-            {[
-              {
-                company: "McDonald's (Arcos Dorados)",
-                role: "Cajera / Atención al Público / Encargada de Temporada",
-                period: "2018 - ACTUALIDAD",
-                tasks: [
-                  "Gestión bajo presión y resolución de problemas en momentos de alta afluencia.",
-                  "Agilidad y eficiencia en diversos roles (caja, mostrador, cocina).",
-                  "Trabajo en equipo colaborativo para optimizar la operación diaria."
-                ]
-              },
-              {
-                company: "Glavinare Web",
-                role: "Asistente en Desarrollo Web (Prácticas Profesionales)",
-                period: "2025",
-                tasks: [
-                  "Creación y edición de landing pages utilizando WordPress y Elementor.",
-                  "Ajustes visuales, diseño responsive y personalización de plantillas.",
-                  "Carga y organización de contenidos siguiendo buenas prácticas de diseño web."
-                ]
-              },
-              {
-                company: "Farmacia STOLAR",
-                role: "Atención al Cliente / Caja",
-                period: "2024",
-                description: "Realicé tareas de atención al público, manejo de caja y asistencia en mostrador. Responsable de gestionar operaciones de cobro y mantenimiento del sector, reforzando habilidades de comunicación y resolución de consultas."
-              }
-            ].map((exp, idx) => (
-              <motion.div
-                key={idx}
-                className="card-subtle p-8 md:p-12 rounded-3xl"
-                {...fadeIn}
-              >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8">
-                  <div>
-                    <h3 className="text-2xl font-bold text-soft-black mb-1">{exp.company}</h3>
-                    <p className="text-terracotta font-medium italic">{exp.role}</p>
+          <motion.div
+            className="card-subtle p-8 md:p-16 rounded-3xl"
+            {...fadeIn}
+          >
+            <h2 className="section-header">Trayectoria</h2>
+            <div className="space-y-16">
+              {[
+                {
+                  company: "McDonald's (Arcos Dorados)",
+                  role: "Cajera / Atención al Público / Encargada de Temporada",
+                  period: "2018 - ACTUALIDAD",
+                  tasks: [
+                    "Gestión bajo presión y resolución de problemas en momentos de alta afluencia.",
+                    "Agilidad y eficiencia en diversos roles (caja, mostrador, cocina).",
+                    "Trabajo en equipo colaborativo para optimizar la operación diaria."
+                  ]
+                },
+                {
+                  company: "Glavinare Web",
+                  role: "Asistente en Desarrollo Web (Prácticas Profesionales)",
+                  period: "2025",
+                  tasks: [
+                    "Creación y edición de landing pages utilizando WordPress y Elementor.",
+                    "Ajustes visuales, diseño responsive y personalización de plantillas.",
+                    "Carga y organización de contenidos siguiendo buenas prácticas de diseño web."
+                  ]
+                },
+                {
+                  company: "Farmacia STOLAR",
+                  role: "Atención al Cliente / Caja",
+                  period: "2024",
+                  description: "Realicé tareas de atención al público, manejo de caja y asistencia en mostrador. Responsable de gestionar operaciones de cobro y mantenimiento del sector, reforzando habilidades de comunicación y resolución de consultas."
+                }
+              ].map((exp, idx) => (
+                <div key={idx} className="relative pl-0 md:pl-8 border-l-0 md:border-l-2 border-pastel-pink/20">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-soft-black mb-1">{exp.company}</h3>
+                      <p className="text-terracotta font-medium italic">{exp.role}</p>
+                    </div>
+                    <span className="text-pastel-pink font-bold mt-2 md:mt-0 text-sm tracking-widest">{exp.period}</span>
                   </div>
-                  <span className="text-pastel-pink font-bold mt-2 md:mt-0 text-sm tracking-widest">{exp.period}</span>
+                  {exp.tasks ? (
+                    <ul className="space-y-4 text-soft-black font-light leading-relaxed">
+                      {exp.tasks.map((task, tIdx) => (
+                        <li key={tIdx} className="flex items-start">
+                          <CheckCircle2 className="text-pastel-pink mr-3 w-5 h-5 mt-1 flex-shrink-0" />
+                          <span>{task}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-soft-black font-light leading-relaxed">{exp.description}</p>
+                  )}
                 </div>
-                {exp.tasks ? (
-                  <ul className="space-y-4 text-soft-black font-light leading-relaxed">
-                    {exp.tasks.map((task, tIdx) => (
-                      <li key={tIdx} className="flex items-start">
-                        <CheckCircle2 className="text-pastel-pink mr-3 w-5 h-5 mt-1 flex-shrink-0" />
-                        <span>{task}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-soft-black font-light leading-relaxed">{exp.description}</p>
-                )}
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Skills */}
-      <section id="habilidades" className="py-32 bg-light-cream">
+      <section id="habilidades" className="py-24 bg-light-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 className="section-header mb-24 text-center" {...fadeIn}>Habilidades</motion.h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div className="card-subtle p-12 rounded-3xl" {...fadeIn}>
-              <div className="flex items-center mb-10">
-                <Terminal className="text-terracotta w-8 h-8 mr-4" />
-                <h3 className="text-2xl font-extrabold text-soft-black">Técnicas</h3>
+          <motion.div className="card-subtle p-8 md:p-16 rounded-3xl" {...fadeIn}>
+            <h2 className="section-header">Habilidades</h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <div className="flex items-center mb-8">
+                  <Terminal className="text-terracotta w-6 h-6 mr-3" />
+                  <h3 className="text-xl font-bold text-soft-black">Técnicas</h3>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  {['WordPress', 'Elementor', 'Java Básico', 'C Básico', 'Sistemas de cobro', 'Organización de datos'].map(skill => (
+                    <span key={skill} className="px-4 py-2 bg-light-cream border border-light-grey rounded-full text-xs font-bold text-soft-black uppercase tracking-widest">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-4">
-                {['WordPress', 'Elementor', 'Java Básico', 'C Básico', 'Sistemas de cobro', 'Organización de datos'].map(skill => (
-                  <span key={skill} className="px-5 py-2.5 bg-white border border-light-grey rounded-full text-xs font-bold text-soft-black uppercase tracking-widest">
-                    {skill}
-                  </span>
-                ))}
+              <div>
+                <div className="flex items-center mb-8">
+                  <Users className="text-terracotta w-6 h-6 mr-3" />
+                  <h3 className="text-xl font-bold text-soft-black">Blandas</h3>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  {['Atención al cliente', 'Comunicación clara', 'Organización', 'Trabajo en equipo', 'Adaptabilidad', 'Puntualidad'].map(skill => (
+                    <span key={skill} className="px-4 py-2 bg-light-cream border border-light-grey rounded-full text-xs font-bold text-soft-black uppercase tracking-widest">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </motion.div>
-            <motion.div className="card-subtle p-12 rounded-3xl" {...fadeIn}>
-              <div className="flex items-center mb-10">
-                <Users className="text-terracotta w-8 h-8 mr-4" />
-                <h3 className="text-2xl font-extrabold text-soft-black">Blandas</h3>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                {['Atención al cliente', 'Comunicación clara', 'Organización', 'Trabajo en equipo', 'Adaptabilidad', 'Puntualidad'].map(skill => (
-                  <span key={skill} className="px-5 py-2.5 bg-white border border-light-grey rounded-full text-xs font-bold text-soft-black uppercase tracking-widest">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contacto" className="py-32 bg-white">
+      <section id="contacto" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-24 items-start">
-            <motion.div {...fadeIn}>
-              <h2 className="section-header mb-10">Contacto</h2>
-              <p className="text-xl text-soft-black/70 mb-16 leading-relaxed font-light">
-                Si querés comunicarte conmigo, acá te dejo mis datos. Estoy disponible para nuevas oportunidades, proyectos o consultas.
-              </p>
-              <div className="space-y-8">
-                {[
-                  { icon: MapPin, label: 'Ubicación', value: 'Mar del Plata, Argentina' },
-                  { icon: Mail, label: 'Email', value: 'cinthiajesabel@gmail.com' },
-                  { icon: Smartphone, label: 'Teléfono', value: '+54 223 6185899' },
-                  { icon: LinkIcon, label: 'LinkedIn', value: 'linkedin.com/in/cinthiaortizdev', isLink: true, href: 'https://linkedin.com/in/cinthiaortizdev' }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center space-x-6">
-                    <div className="bg-pastel-pink/10 p-4 rounded-full">
-                      <item.icon className="text-terracotta w-6 h-6" />
+          <motion.div className="card-subtle p-8 md:p-16 rounded-3xl" {...fadeIn}>
+            <h2 className="section-header">Contacto</h2>
+            <div className="lg:grid lg:grid-cols-2 lg:gap-24 items-start">
+              <div>
+                <p className="text-xl text-soft-black/70 mb-12 leading-relaxed font-light">
+                  Si querés comunicarte conmigo, acá te dejo mis datos. Estoy disponible para nuevas oportunidades, proyectos o consultas.
+                </p>
+                <div className="space-y-8">
+                  {[
+                    { icon: MapPin, label: 'Ubicación', value: 'Mar del Plata, Argentina' },
+                    { icon: Mail, label: 'Email', value: 'cinthiajesabel@gmail.com' },
+                    { icon: Smartphone, label: 'Teléfono', value: '+54 223 6185899' },
+                    { icon: LinkIcon, label: 'LinkedIn', value: 'linkedin.com/in/cinthiaortizdev', isLink: true, href: 'https://linkedin.com/in/cinthiaortizdev' }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center space-x-6">
+                      <div className="bg-pastel-pink/10 p-4 rounded-full">
+                        <item.icon className="text-terracotta w-6 h-6" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold text-soft-black/40 uppercase tracking-widest">{item.label}</p>
+                        {item.isLink ? (
+                          <a href={item.href} className="text-lg font-bold text-soft-black hover:text-terracotta underline decoration-pastel-pink underline-offset-4 transition-colors">
+                            {item.value}
+                          </a>
+                        ) : (
+                          <p className="text-lg font-bold text-soft-black">{item.value}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-16 lg:mt-0">
+                <form className="bg-light-cream p-8 rounded-2xl border border-light-grey/50">
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-2" htmlFor="name">Nombre</label>
+                      <input
+                        type="text"
+                        id="name"
+                        className="w-full px-5 py-3 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
+                        placeholder="Tu nombre"
+                      />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-soft-black/40 uppercase tracking-widest">{item.label}</p>
-                      {item.isLink ? (
-                        <a href={item.href} className="text-lg font-bold text-soft-black hover:text-terracotta underline decoration-pastel-pink underline-offset-4 transition-colors">
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="text-lg font-bold text-soft-black">{item.value}</p>
-                      )}
+                      <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-2" htmlFor="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        className="w-full px-5 py-3 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
+                        placeholder="ejemplo@correo.com"
+                      />
                     </div>
+                    <div>
+                      <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-2" htmlFor="message">Mensaje</label>
+                      <textarea
+                        id="message"
+                        rows={4}
+                        className="w-full px-5 py-3 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
+                        placeholder="¿En qué puedo ayudarte?"
+                      ></textarea>
+                    </div>
+                    <button type="submit" className="cta-button w-full font-bold py-4 rounded-full shadow-lg hover:shadow-terracotta/20 uppercase tracking-widest text-sm">
+                      Enviar Mensaje
+                    </button>
                   </div>
-                ))}
+                </form>
               </div>
-            </motion.div>
-            <motion.div className="mt-20 lg:mt-0" {...fadeIn}>
-              <form className="bg-light-cream p-10 rounded-3xl border border-light-grey shadow-sm">
-                <div className="space-y-8">
-                  <div>
-                    <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-3" htmlFor="name">Nombre</label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-3" htmlFor="email">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
-                      placeholder="ejemplo@correo.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-3" htmlFor="message">Mensaje</label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
-                      placeholder="¿En qué puedo ayudarte?"
-                    ></textarea>
-                  </div>
-                  <button type="submit" className="cta-button w-full font-bold py-5 rounded-full shadow-lg hover:shadow-terracotta/20 uppercase tracking-widest text-sm">
-                    Enviar Mensaje
-                  </button>
-                </div>
-              </form>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

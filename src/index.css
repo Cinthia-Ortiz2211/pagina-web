@@ -13,21 +13,21 @@
 
 @layer base {
   body {
-    @apply bg-light-cream text-soft-black font-sans;
+    @apply bg-light-cream text-soft-black font-sans antialiased;
   }
 }
 
 .section-header {
-  @apply text-pastel-pink font-extrabold uppercase;
-  font-size: clamp(1.4rem, 7vw, 2.5rem);
-  letter-spacing: clamp(0.05em, 1.5vw, 0.2em);
+  @apply text-pastel-pink font-extrabold uppercase border-b border-light-grey pb-8 mb-12 text-left block w-full;
+  font-size: clamp(1.4rem, 6vw, 2.2rem);
+  letter-spacing: clamp(0.05em, 1.2vw, 0.15em);
   line-height: 1.2;
 }
 
 .cta-button {
-  @apply bg-terracotta text-white font-bold transition-all hover:brightness-110;
+  @apply bg-terracotta text-white font-bold transition-all hover:brightness-110 active:scale-95;
 }
 
 .card-subtle {
-  @apply bg-white border border-light-grey shadow-sm;
+  @apply bg-white border border-light-grey shadow-sm overflow-hidden;
 }
