@@ -127,7 +127,7 @@ export default function App() {
       {/* Studies */}
       <section id="estudios" className="py-24 bg-light-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="card-subtle p-8 md:p-16 rounded-3xl" {...fadeIn}>
+          <motion.div className="card-subtle p-6 sm:p-8 md:p-16 rounded-3xl" {...fadeIn}>
             <h2 className="section-header">Estudios</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -154,7 +154,7 @@ export default function App() {
       <section id="trayectoria" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="card-subtle p-8 md:p-16 rounded-3xl"
+            className="card-subtle p-6 sm:p-8 md:p-16 rounded-3xl"
             {...fadeIn}
           >
             <h2 className="section-header">Trayectoria</h2>
@@ -217,7 +217,7 @@ export default function App() {
       {/* Skills */}
       <section id="habilidades" className="py-24 bg-light-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="card-subtle p-8 md:p-16 rounded-3xl" {...fadeIn}>
+          <motion.div className="card-subtle p-6 sm:p-8 md:p-16 rounded-3xl" {...fadeIn}>
             <h2 className="section-header">Habilidades</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
@@ -254,7 +254,7 @@ export default function App() {
       {/* Contact */}
       <section id="contacto" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="card-subtle p-8 md:p-16 rounded-3xl" {...fadeIn}>
+          <motion.div className="card-subtle p-6 sm:p-8 md:p-16 rounded-3xl" {...fadeIn}>
             <h2 className="section-header">Contacto</h2>
             <div className="lg:grid lg:grid-cols-2 lg:gap-24 items-start">
               <div>
@@ -339,7 +339,7 @@ export default function App() {
             </a>
           </div>
           <p className="text-[10px] font-bold text-soft-black/30 uppercase tracking-[0.3em]">
-            © {new Date().getFullYear()} Cinthia Jesabel Ortiz. Todos los derechos reservados.
+            © {new Date().getFullYear()} Cinthia Jesabel Ortiz. Todos los derechos reservados. <span className="opacity-0">.</span>
           </p>
         </div>
       </footer>

@@ -18,7 +18,7 @@
 }
 
 .section-header {
-  @apply text-pastel-pink font-extrabold uppercase border-b border-light-grey pb-8 mb-12 text-left block w-full;
+  @apply text-pastel-pink font-extrabold uppercase border-b border-light-grey pb-5 sm:pb-8 mb-8 sm:mb-12 text-left block w-full;
   font-size: clamp(1.4rem, 6vw, 2.2rem);
   letter-spacing: clamp(0.05em, 1.2vw, 0.15em);
   line-height: 1.2;
