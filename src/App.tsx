@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { 
-  Menu, 
-  Download, 
-  CheckCircle2, 
-  Terminal, 
-  Users, 
-  MapPin, 
-  Mail, 
-  Smartphone, 
+import {
+  Menu,
+  Download,
+  CheckCircle2,
+  Terminal,
+  Users,
+  MapPin,
+  Mail,
+  Smartphone,
   Link as LinkIcon,
   Linkedin
 } from 'lucide-react';
@@ -58,7 +58,7 @@ export default function App() {
       <header className="relative pt-32 pb-24 lg:pt-48 lg:pb-40 bg-light-cream overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 mb-16 lg:mb-0"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -66,15 +66,15 @@ export default function App() {
             >
               <div className="relative max-w-sm mx-auto">
                 <div className="absolute -inset-6 bg-pastel-pink/10 rounded-full blur-2xl"></div>
-                <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf9W5O0_p_i_y_u_z_x_c_v_b_n_m_q_w_e_r_t_y_u_i_o_p_a_s_d_f_g_h_j_k_l_z_x_c_v_b_n_m" 
-                  alt="Cinthia Jesabel Ortiz Portrait" 
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf9W5O0_p_i_y_u_z_x_c_v_b_n_m_q_w_e_r_t_y_u_i_o_p_a_s_d_f_g_h_j_k_l_z_x_c_v_b_n_m"
+                  alt="Cinthia Jesabel Ortiz Portrait"
                   className="relative rounded-3xl shadow-sm w-full object-cover aspect-[4/5] hover:scale-[1.02] transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
               </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="lg:col-span-7 text-center lg:text-left"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -84,7 +84,7 @@ export default function App() {
                 Desarrolladora Web en Formación
               </span>
               <h1 className="text-6xl lg:text-8xl font-extrabold text-soft-black mb-8 leading-tight">
-                Cinthia Jesabel <br/>
+                Cinthia Jesabel <br />
                 <span className="text-pastel-pink font-light italic">Ortiz</span>
               </h1>
               <p className="text-xl text-soft-black/70 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
@@ -106,11 +106,11 @@ export default function App() {
 
       {/* About Me */}
       <section id="sobre-mi" className="py-32 bg-white">
-        <motion.div 
+        <motion.div
           className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
           {...fadeIn}
         >
-          <h2 className="section-header text-4xl mb-16">Sobre mí</h2>
+          <h2 className="section-header mb-16">Sobre mí</h2>
           <div className="space-y-8 text-xl leading-relaxed text-soft-black font-light">
             <p>
               Soy Cinthia Jesabel Ortiz, una persona curiosa, organizada y apasionada por aprender. Me encanta trabajar en espacios donde pueda aportar claridad, empatía y soluciones prácticas. Tengo una fuerte orientación al servicio y al detalle, algo que desarrollé a lo largo de mis años en atención al público y en mis primeras experiencias dentro del mundo web.
@@ -125,7 +125,7 @@ export default function App() {
       {/* Studies */}
       <section id="estudios" className="py-32 bg-light-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 className="section-header text-4xl mb-24 text-center" {...fadeIn}>Estudios</motion.h2>
+          <motion.h2 className="section-header mb-24 text-center" {...fadeIn}>Estudios</motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { year: '2025 - Presente', title: 'Tecnicatura Universitaria en Programación', school: 'UTN (En Curso)' },
@@ -133,7 +133,7 @@ export default function App() {
               { year: '2018 - Pausa', title: 'Licenciatura en Criminalística', school: 'F.A.S.T.A' },
               { year: '2017', title: 'Finalización de Secundaria', school: 'Educación Media' }
             ].map((study, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 className="card-subtle p-8 rounded-2xl group hover:border-pastel-pink/40 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function App() {
       {/* Experience */}
       <section id="trayectoria" className="py-32 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 className="section-header text-4xl mb-24 text-center" {...fadeIn}>Trayectoria</motion.h2>
+          <motion.h2 className="section-header mb-24 text-center" {...fadeIn}>Trayectoria</motion.h2>
           <div className="space-y-12">
             {[
               {
@@ -183,7 +183,7 @@ export default function App() {
                 description: "Realicé tareas de atención al público, manejo de caja y asistencia en mostrador. Responsable de gestionar operaciones de cobro y mantenimiento del sector, reforzando habilidades de comunicación y resolución de consultas."
               }
             ].map((exp, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 className="card-subtle p-8 md:p-12 rounded-3xl"
                 {...fadeIn}
@@ -216,7 +216,7 @@ export default function App() {
       {/* Skills */}
       <section id="habilidades" className="py-32 bg-light-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 className="section-header text-4xl mb-24 text-center" {...fadeIn}>Habilidades</motion.h2>
+          <motion.h2 className="section-header mb-24 text-center" {...fadeIn}>Habilidades</motion.h2>
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div className="card-subtle p-12 rounded-3xl" {...fadeIn}>
               <div className="flex items-center mb-10">
@@ -253,7 +253,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-24 items-start">
             <motion.div {...fadeIn}>
-              <h2 className="section-header text-5xl mb-10">Contacto</h2>
+              <h2 className="section-header mb-10">Contacto</h2>
               <p className="text-xl text-soft-black/70 mb-16 leading-relaxed font-light">
                 Si querés comunicarte conmigo, acá te dejo mis datos. Estoy disponible para nuevas oportunidades, proyectos o consultas.
               </p>
@@ -287,28 +287,28 @@ export default function App() {
                 <div className="space-y-8">
                   <div>
                     <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-3" htmlFor="name">Nombre</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none" 
-                      placeholder="Tu nombre" 
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
+                      placeholder="Tu nombre"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-3" htmlFor="email">Email</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none" 
-                      placeholder="ejemplo@correo.com" 
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
+                      placeholder="ejemplo@correo.com"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-soft-black/60 uppercase tracking-widest mb-3" htmlFor="message">Mensaje</label>
-                    <textarea 
-                      id="message" 
-                      rows={5} 
-                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none" 
+                    <textarea
+                      id="message"
+                      rows={5}
+                      className="w-full px-6 py-4 rounded-xl border-light-grey bg-white focus:border-terracotta focus:ring focus:ring-terracotta/10 transition-all outline-none"
                       placeholder="¿En qué puedo ayudarte?"
                     ></textarea>
                   </div>

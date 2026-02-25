@@ -18,11 +18,11 @@
 }
 
 .section-header {
-  @apply text-pastel-pink font-extrabold uppercase tracking-[0.2em];
+  @apply text-pastel-pink font-extrabold uppercase tracking-[0.1em] text-3xl sm:text-4xl sm:tracking-[0.2em];
 }
 
 .cta-button {
-  @apply bg-terracotta text-white transition-all hover:brightness-110;
+  @apply bg-terracotta text-white font-bold transition-all hover:brightness-110;
 }
 
 .card-subtle {
