@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-light-cream: #FAF9F6;
+  --color-soft-black: #2A2A2A;
+  --color-pastel-pink: #C8A9B8;
+  --color-terracotta: #CC7355;
+  --color-light-grey: #E0E0E0;
+}
+
+@layer base {
+  body {
+    @apply bg-light-cream text-soft-black font-sans;
+  }
+}
+
+.section-header {
+  @apply text-pastel-pink font-extrabold uppercase tracking-[0.2em];
+}
+
+.cta-button {
+  @apply bg-terracotta text-white transition-all hover:brightness-110;
+}
+
+.card-subtle {
+  @apply bg-white border border-light-grey shadow-sm;
+}
